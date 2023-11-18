@@ -1,54 +1,134 @@
-<!-- Erik Veshi-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <script type="text/javascript" src="form.js"> </script>
 </head>
-<body style="background-color: #DBF9FC;">
-    <h2>List of things to order in our page</h2>
+<body style="background-color: #1fc5d4;">
 
-    <table style="background-color:navajowhite">
-        <tr>
-        <th>Parts</th>
-        <th>Series</th>
-        <th>Price</th>
+<div></div>
+<h2>PC Price List</h2>
+<table width="40%" id="alignment" > 
+    <tr>  
+    <th>Parts</th> 
+    <th></th>
+    <th>Price(Rs.)</th>
+    </tr> 
+
+    <tr>
+        <td>CPU i7 Gen 13th</td> 
+        <td> € </td>
+        <td>749.90</td> 
+    </tr> 
+
+    <tr>
+        <td>GeForce RTX 4080</td>
+        <td>€</td> 
+        <td>1.799</td> 
         </tr>
-        
-        <tr>
-        <td>Intel® Core™ i7 processor</td>
-        <td>14700K33M Cache, up to 5.60 GHz</td>
-        <td>€374,66</td>
-        </tr>
+    <tr> 
 
-        <tr>
-        <td>NVIDIA GeForce RTX 40 Series</td>
-        <td>GeForce RTX 4090</td>
-        <td>€1,799</td>
-        </tr>
-        </table>
+    <td>PreBuilt PC</td>
+        <td> € </td>  
+        <td>490.00</td>
+    </tr> 
 
-        <table style="background-color: rgb(167, 109, 109);"></br>
-            
-            <tr>
-                <th>Bundles</th>
-                <th>Price</th>
-            </tr>
-            
-            <tr>
-                <td>Keyboard & Mouse Set</td>
-                <td>€199,99</td>
-            </tr>
-
-            <tr>
-                <td>PreBuilt PC</td>
-                <td>€499,99</td>
-            </tr>
-
-        </table>
+    <tr>  
+        <td>Keyboard&Mouse set</td>
+        <td> € </td> 
+        <td>200.00</td> 
+    </tr>  
 
     
+    <table style="background-color:aquamarine;margin-left: 100px;">  <tr>
+        
+    </select>
+    </td> 
+    </tr>
+    <tr>
+    <td>User name:</td>
+    <td>
+    <input type="text" >
+    </td>
+    </tr>
+    <tr><td>Mobile: </td>
+    <td><input type="text" id="mblenmb" onfocusout="checkmob()"></td></tr> 
+    </table>
+    <br>
+
+    <form name="tblform" >
+        <table width="80%"  id="alignment" >
+        <tr>
+        <th>Food Item</th>
+        <th> </th>
+        <th>Quantity</th>
+        <th>Price</th> 
+        </tr>
+        <tr> 
+        <td>Item 1:</td> 
+        <td>
+        <select id="item1">
+        <option value="1">--Select Item--</option> 
+        <option value="CPU i7 Gen 13th">CPU i7 Gen 13th</option> 
+        <option value="GeForce RTX 4080">GeForce RTX 4080</option> 
+        <option value="PreBuilt PC">PreBuilt PC</option> 
+        <option value="Keyboard&Mouse set">Keyboard&Mouse set</option>  
+        </select>
+        </td> 
+        <td><input type="number" value="0" id="q1"></td>
+        <td><input type="text" id="p1"></td>
+        </tr>   
+        <tr>
+        <td>Item 2:</td>
+        <td>
+        <select id="item2"> 
+            <option value="1">--Select Item--</option>
+            <option value="CPU i7 Gen 13th">CPU i7 Gen 13th</option> 
+            <option value="GeForce RTX 4080">GeForce RTX 4080</option> 
+            <option value="PreBuilt PC">PreBuilt PC</option> 
+            <option value="Keyboard&Mouse set">Keyboard&Mouse set</option>  
+        </select>
+        </td>
+        <td><input  type="number" value="0" id="q2"></td>  
+        <td><input type="text"  id="p2"></td>  
+        </tr> 
+        <tr>
+        <td>Item 3:</td>
+        <td><select id="item3"> 
+            <option value="1">--Select Item--</option> 
+            <option value="CPU i7 Gen 13th">CPU i7 Gen 13th</option> 
+            <option value="GeForce RTX 4080">GeForce RTX 4080</option> 
+            <option value="PreBuilt PC">PreBuilt PC</option> 
+            <option value="Keyboard&Mouse set">Keyboard&Mouse set</option>
+        </select>
+        </td>
+        <td><input type="number" value="0" id="q3"></td>
+        <td><input type="text"  id="p3"></td> 
+        </tr> 
+        <tr>
+        <td>Item 4:</td>
+        <td><select id="item4">   
+        <option value="1">--Select Item--</option> 
+        <option value="CPU i7 Gen 13th">CPU i7 Gen 13th</option> 
+        <option value="GeForce RTX 4080">GeForce RTX 4080</option> 
+        <option value="PreBuilt PC">PreBuilt PC</option> 
+        <option value="Keyboard&Mouse set">Keyboard&Mouse set</option>   
+        </select>
+        </td>
+        <td><input type="number" value="0" id="q4"></td>
+        <td><input type="text"  id="p4"></td> 
+        </tr>    
+        <tr>
+        <td></td> 
+        <td></td> 
+        <td><input type="submit" class="button" value="Create Bill" onclick=createBill()></td>
+        <td><input type="reset" class="button" value="Clear"></td>
+        </tr>
+        </table>
+        </form>
+
 </body>
 </html>
